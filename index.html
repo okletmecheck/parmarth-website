@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parmarth Education Counselling | NIOS, Distance Education &amp; Board Guidance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#12213F;
+    --navy-mid:#1E3157;
+    --paper:#F5F1E6;
+    --paper-dim:#EAE2CD;
+    --gold:#B9843C;
+    --gold-light:#E4C083;
+    --ink:#1E1B16;
+    --sage:#4B6B4F;
+    --whatsapp:#2E7D5B;
+
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+
+    --max: 1180px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  @media(max-width:640px){ .wrap{padding:0 20px;} }
+
+  h1,h2,h3{font-family:var(--serif); font-weight:600; letter-spacing:-0.01em;}
+  .eyebrow{
+    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.14em;
+    text-transform:uppercase; font-weight:600;
+  }
+
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--sans); font-weight:600; font-size:0.95rem;
+    padding:14px 26px; border-radius:3px; border:1.5px solid transparent;
+    cursor:pointer; transition:transform .18s ease, background .18s ease, border-color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-gold{ background:var(--gold); color:var(--navy-deep); }
+  .btn-gold:hover{ background:var(--gold-light); }
+  .btn-ghost{ border-color:rgba(245,241,230,0.45); color:var(--paper); }
+  .btn-ghost:hover{ border-color:var(--paper); background:rgba(245,241,230,0.08); }
+  .btn-ghost-dark{ border-color:rgba(30,27,22,0.3); color:var(--ink); }
+  .btn-ghost-dark:hover{ border-color:var(--ink); background:rgba(30,27,22,0.04); }
+  .btn-whatsapp{ background:var(--whatsapp); color:#fff; }
+  .btn-whatsapp:hover{ background:#256a4d; }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,33,63,0.94); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(228,192,131,0.18);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
+  .brand{ display:flex; align-items:center; gap:10px; color:var(--paper); }
+  .brand-mark{ width:34px; height:34px; flex-shrink:0; }
+  .brand-text{ line-height:1.1; }
+  .brand-text .name{ font-family:var(--serif); font-size:1.15rem; font-weight:600; }
+  .brand-text .sub{ font-family:var(--mono); font-size:0.62rem; letter-spacing:0.08em; color:var(--gold-light); text-transform:uppercase; }
+  nav.links{ display:flex; align-items:center; gap:30px; }
+  nav.links a{ color:var(--paper); font-size:0.9rem; font-weight:500; opacity:0.85; transition:opacity .15s; }
+  nav.links a:hover{ opacity:1; }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .menu-toggle{ display:none; background:none; border:none; color:var(--paper); }
+
+  @media(max-width:900px){
+    nav.links{ display:none; }
+    .nav-cta .btn-ghost{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+    color:var(--paper);
+    padding:96px 0 70px;
+  }
+  .hero-grid{ position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
+  @media(max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+
+  .hero .eyebrow{ color:var(--gold-light); }
+  .hero h1{
+    font-size:clamp(2.3rem, 4.6vw, 3.4rem);
+    line-height:1.1; margin:18px 0 20px; max-width:22ch;
+  }
+  .hero h1 em{ font-style:italic; color:var(--gold-light); font-weight:400; }
+  .hero p.lead{ font-size:1.08rem; max-width:46ch; color:rgba(245,241,230,0.82); margin-bottom:34px; }
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+
+  .route-art{ position:relative; z-index:2; }
+  .route-art svg{ width:100%; height:auto; }
+
+  .hero::before{
+    content:""; position:absolute; inset:0; z-index:1; opacity:0.5;
+    background-image:radial-gradient(circle at 15% 20%, rgba(228,192,131,0.10), transparent 40%),
+                      radial-gradient(circle at 85% 80%, rgba(228,192,131,0.08), transparent 45%);
+  }
+
+  /* trust strip */
+  .trust{ background:var(--paper-dim); border-bottom:1px solid rgba(30,27,22,0.08); }
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:28px 44px; align-items:center; justify-content:center;
+    padding:22px 0; font-family:var(--mono); font-size:0.76rem; letter-spacing:0.04em;
+    color:var(--navy-mid); text-transform:uppercase; font-weight:600;
+  }
+  .trust-row span{ display:flex; align-items:center; gap:8px; }
+  .trust-row svg{ width:16px; height:16px; color:var(--sage); flex-shrink:0; }
+
+  /* ---------- Section shell ---------- */
+  section{ padding:88px 0; }
+  .section-head{ max-width:640px; margin-bottom:52px; }
+  .section-head .eyebrow{ color:var(--sage); }
+  .section-head h2{ font-size:clamp(1.8rem, 3.2vw, 2.4rem); margin-top:14px; color:var(--navy-deep); }
+  .section-head p{ margin-top:14px; color:rgba(30,27,22,0.68); font-size:1.02rem; }
+
+  /* ---------- About ---------- */
+  .about{ background:var(--paper); }
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+  @media(max-width:860px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+  .about-copy .eyebrow{ color:var(--sage); }
+  .about-copy h2{ font-size:clamp(1.7rem,3vw,2.2rem); color:var(--navy-deep); margin:14px 0 18px; }
+  .about-copy p{ color:rgba(30,27,22,0.72); margin-bottom:16px; font-size:1.02rem; }
+  .credentials{ display:flex; flex-direction:column; gap:14px; margin-top:8px; }
+  .credential-chip{
+    display:flex; gap:14px; align-items:flex-start; padding:18px 20px;
+    background:var(--paper-dim); border-left:3px solid var(--gold);
+  }
+  .credential-chip svg{ width:22px; height:22px; color:var(--navy-deep); flex-shrink:0; margin-top:2px; }
+  .credential-chip .t{ font-weight:700; font-size:0.95rem; color:var(--navy-deep); }
+  .credential-chip .d{ font-size:0.87rem; color:rgba(30,27,22,0.65); margin-top:2px; }
+
+  /* ---------- Courses ---------- */
+  .courses{ background:var(--navy-deep); color:var(--paper); }
+  .courses .section-head .eyebrow{ color:var(--gold-light); }
+  .courses .section-head h2{ color:var(--paper); }
+  .courses .section-head p{ color:rgba(245,241,230,0.7); }
+  .course-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(245,241,230,0.14); border:1px solid rgba(245,241,230,0.14); }
+  @media(max-width:980px){ .course-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:600px){ .course-grid{ grid-template-columns:1fr; } }
+  .course-card{ background:var(--navy-deep); padding:44px 32px; display:flex; flex-direction:column; gap:20px; transition:background .2s; }
+  .course-card:hover{ background:var(--navy-mid); }
+  .course-card .num{ font-family:var(--mono); font-size:0.9rem; color:var(--gold-light); letter-spacing:0.08em; }
+  .course-card h3{ font-size:1.4rem; font-weight:600; color:var(--paper); }
+  .course-card ul{ display:flex; flex-direction:column; gap:12px; margin-top:4px; }
+  .course-card li{ font-size:1.02rem; color:rgba(245,241,230,0.72); padding-left:16px; position:relative; }
+  .course-card li::before{ content:"—"; position:absolute; left:0; color:var(--gold); }
+
+  /* ---------- Why choose ---------- */
+  .why{ background:var(--paper); }
+  .why-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px; }
+  @media(max-width:900px){ .why-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:560px){ .why-grid{ grid-template-columns:1fr; } }
+  .why-item{ padding-top:22px; border-top:2px solid var(--navy-deep); }
+  .why-item svg{ width:26px; height:26px; color:var(--gold); margin-bottom:14px; }
+  .why-item h3{ font-size:1.05rem; font-weight:700; color:var(--navy-deep); margin-bottom:8px; }
+  .why-item p{ font-size:0.92rem; color:rgba(30,27,22,0.68); }
+
+  /* ---------- Process ---------- */
+  .process{ background:var(--paper-dim); }
+  .path-wrap{ position:relative; margin-top:20px; }
+  .path-line-svg{ position:absolute; top:38px; left:0; width:100%; height:40px; z-index:0; }
+  @media(max-width:860px){ .path-line-svg{ display:none; } }
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; position:relative; z-index:1; }
+  @media(max-width:860px){ .steps{ grid-template-columns:1fr; gap:0; } }
+  .step{ text-align:left; }
+  @media(max-width:860px){
+    .step{ display:flex; gap:20px; padding:0 0 40px 0; position:relative; }
+    .step:not(:last-child)::after{
+      content:""; position:absolute; left:38px; top:78px; bottom:-4px; width:2px;
+      background-repeat:repeat-y; background-image:linear-gradient(var(--navy-deep) 60%, transparent 0%);
+      background-size:2px 10px;
+    }
+  }
+  .step-node{
+    width:76px; height:76px; border-radius:50%; background:var(--navy-deep);
+    display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+    border:3px solid var(--paper-dim); box-shadow:0 0 0 2px var(--navy-deep);
+    flex-shrink:0;
+  }
+  .step-node svg{ width:30px; height:30px; color:var(--gold-light); }
+  .step .tag{ font-family:var(--mono); font-size:0.7rem; letter-spacing:0.1em; color:var(--sage); text-transform:uppercase; font-weight:700; }
+  .step h3{ font-size:1.15rem; color:var(--navy-deep); margin:8px 0 8px; }
+  .step p{ font-size:0.92rem; color:rgba(30,27,22,0.68); max-width:32ch; }
+
+  /* ---------- Contact ---------- */
+  .contact{ background:var(--navy-deep); color:var(--paper); }
+  .contact .section-head .eyebrow{ color:var(--gold-light); }
+  .contact .section-head h2{ color:var(--paper); }
+  .contact .section-head p{ color:rgba(245,241,230,0.7); }
+  .contact-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:54px; }
+  @media(max-width:860px){ .contact-grid{ grid-template-columns:1fr; gap:36px; } }
+  .contact-card{ background:var(--navy-mid); padding:36px; border:1px solid rgba(245,241,230,0.12); }
+  .contact-card h3{ font-size:1.2rem; margin-bottom:8px; color:var(--paper); }
+  .contact-card p{ color:rgba(245,241,230,0.72); font-size:0.95rem; margin-bottom:22px; }
+  .info-list{ display:flex; flex-direction:column; gap:20px; }
+  .info-item{ display:flex; gap:14px; align-items:flex-start; }
+  .info-item svg{ width:20px; height:20px; color:var(--gold-light); flex-shrink:0; margin-top:3px; }
+  .info-item .l{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-light); }
+  .info-item .v{ font-size:0.95rem; color:var(--paper); margin-top:2px; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--navy-deep); border-top:1px solid rgba(245,241,230,0.12); padding:32px 0; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .footer-row p{ font-size:0.8rem; color:rgba(245,241,230,0.55); }
+  .footer-links{ display:flex; gap:22px; }
+  .footer-links a{ font-size:0.82rem; color:rgba(245,241,230,0.7); }
+  .footer-links a:hover{ color:var(--gold-light); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="#" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" stroke="#E4C083" stroke-width="1.4"/>
+        <path d="M20 10 L32 15.5 L20 21 L8 15.5 Z" fill="#E4C083"/>
+        <path d="M13 18 V25 C13 27.5 16 29.5 20 29.5 C24 29.5 27 27.5 27 25 V18" stroke="#F5F1E6" stroke-width="1.3" fill="none"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">Parmarth</span><br>
+        <span class="sub">Education Counselling</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Free Counselling</a>
+      <a href="#contact" class="btn btn-gold">Check Eligibility</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">NIOS · Distance Education · Board Counselling</p>
+      <h1>Parmarth Education Counselling<br>Complete Guidance for Your Further Studies. <em>Anytime. Anywhere.</em></h1>
+      <p class="lead">Honest, one-to-one guidance for dropouts, working professionals, and athletes who want a recognised certificate or degree — without going back to a regular classroom.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Free Counselling</a>
+        <a href="#contact" class="btn btn-ghost">Check Eligibility</a>
+      </div>
+    </div>
+    <div class="route-art" aria-hidden="true">
+      <svg viewBox="0 0 420 360" fill="none">
+        <path d="M40 300 C 90 260, 60 200, 130 190 S 240 140, 220 90 S 320 40, 380 55"
+              stroke="#E4C083" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <g>
+          <circle cx="40" cy="300" r="7" fill="#F5F1E6"/>
+          <text x="54" y="305" fill="#F5F1E6" font-family="IBM Plex Mono" font-size="11" letter-spacing="1">10TH</text>
+        </g>
+        <g>
+          <circle cx="220" cy="90" r="7" fill="#F5F1E6"/>
+          <text x="234" y="95" fill="#F5F1E6" font-family="IBM Plex Mono" font-size="11" letter-spacing="1">12TH</text>
+        </g>
+        <g>
+          <circle cx="380" cy="55" r="9" fill="#B9843C"/>
+          <path d="M373 55 l5 5 l9 -11" stroke="#12213F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="345" y="35" fill="#E4C083" font-family="IBM Plex Mono" font-size="11" letter-spacing="1">DEGREE</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-row">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> NIOS Approved Guidance</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> UGC-Recognised University Partners</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> One-to-One Counselling, Always Free</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <p class="eyebrow">About Parmarth</p>
+      <h2>Your path to degree completion.</h2>
+      <p>Life doesn't always follow the regular school timetable. Illness, work, family responsibility, or years spent training for sport can mean school gets interrupted — but that shouldn't mean the door to a certificate or degree closes.</p>
+      <p>Parmarth Education Counselling exists for exactly this. We guide students and working adults through NIOS, distance education, and alternate board options — explaining what's actually possible for your situation, honestly, before any form is filled.</p>
+    </div>
+    <div class="credentials">
+      <div class="credential-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+        <div><div class="t">NIOS Approved Study Centre</div><div class="d">Registrations, exam forms, and study material guided end to end.</div></div>
+      </div>
+      <div class="credential-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M7 9h10M7 13h10M7 17h6"/></svg>
+        <div><div class="t">UGC-Recognised University Partners</div><div class="d">Degree admissions routed only through recognised, verifiable institutions.</div></div>
+      </div>
+      <div class="credential-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
+        <div><div class="t">Real, One-to-One Counselling</div><div class="d">Every student's situation is mapped individually — no generic pitch.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What We Help With</p>
+      <h2>Courses We Guide You Through</h2>
+      <p>Whichever route fits your situation — school completion, degree, or a different board — we help you choose it and get admitted correctly the first time.</p>
+    </div>
+    <div class="course-grid">
+      <div class="course-card">
+        <span class="num">01</span>
+        <h3>NIOS 10th &amp; 12th</h3>
+        <p style="font-size:1.02rem; color:rgba(245,241,230,0.78);">For dropouts, working students, and athletes who need flexible timelines.</p>
+        <ul>
+          <li>Class 10th &amp; 12th registration</li>
+          <li>On-demand exam scheduling</li>
+          <li>Subject improvement &amp; re-attempts</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <span class="num">02</span>
+        <h3>Distance Education</h3>
+        <p style="font-size:1.02rem; color:rgba(245,241,230,0.78);">Degrees from UGC-recognised universities, studied at your own pace.</p>
+        <ul>
+          <li>BA · B.Com · BBA · MBA</li>
+          <li>MA · M.Com</li>
+          <li>University shortlisting support</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <span class="num">03</span>
+        <h3>B.Ed &amp; M.Ed</h3>
+        <p style="font-size:1.02rem; color:rgba(245,241,230,0.78);">Professional teaching degrees through recognised distance &amp; correspondence programs.</p>
+        <ul>
+          <li>Bachelor of Education (B.Ed)</li>
+          <li>Master of Education (M.Ed)</li>
+          <li>Admission &amp; eligibility guidance</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <span class="num">04</span>
+        <h3>Exam &amp; Admission Support</h3>
+        <p style="font-size:1.02rem; color:rgba(245,241,230,0.78);">The paperwork side, handled properly.</p>
+        <ul>
+          <li>Form filling assistance</li>
+          <li>Study material access</li>
+          <li>Exam centre guidance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>Guidance that stays with you till the result.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
+        <h3>Expert Counselling</h3>
+        <p>One honest conversation to map the fastest, most reliable route for your specific situation.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <h3>Easy Admission Process</h3>
+        <p>We handle the forms and documentation, so you can focus on studying, not paperwork.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v14M6 9l6 6 6-6"/><path d="M5 21h14"/></svg>
+        <h3>Study Material &amp; Support</h3>
+        <p>Structured material and ongoing doubt support, not just an admission slip.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 6l9 4 9-4-9-4z"/><path d="M3 6v9c0 2.5 4 5 9 5s9-2.5 9-5V6"/></svg>
+        <h3>Result Oriented</h3>
+        <p>We stay involved through exams and results — our work isn't done at admission.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Admission Process</p>
+      <h2>Three steps, start to finish.</h2>
+    </div>
+    <div class="path-wrap">
+      <svg class="path-line-svg" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="70" y1="20" x2="930" y2="20" stroke="#12213F" stroke-width="2" stroke-dasharray="1 12" stroke-linecap="round"/>
+      </svg>
+      <div class="steps">
+        <div class="step">
+          <div class="step-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg>
+          </div>
+          <p class="tag">Step 1</p>
+          <h3>Free Counselling Call</h3>
+          <p>We understand your background and study goals, and explain exactly what path fits — no obligation.</p>
+        </div>
+        <div class="step">
+          <div class="step-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          </div>
+          <p class="tag">Step 2</p>
+          <h3>Document Submission</h3>
+          <p>We tell you precisely what's needed and check every document before it's filed.</p>
+        </div>
+        <div class="step">
+          <div class="step-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+          </div>
+          <p class="tag">Step 3</p>
+          <h3>Admission + Study Start</h3>
+          <p>Once enrolled, you receive study material and ongoing support — the real work begins here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Start with a free counselling call.</h2>
+      <p>No pressure, no jargon — just a clear answer on what's possible for you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Talk to a Counsellor on WhatsApp</h3>
+        <p>The fastest way to reach us. Send your query and a counsellor will respond directly.</p>
+        <a class="btn btn-whatsapp" href="https://wa.me/918595062603" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09.99-2.37c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.45.12.62-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="contact-card">
+        <h3>Visit or Call</h3>
+        <div class="info-list">
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg>
+            <div><div class="l">Phone</div><div class="v">+91 85950 62603<br>+91 72900 23542</div></div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></svg>
+            <div><div class="l">Email</div><div class="v">parmartheducationsolution@gmail.com</div></div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="l">Address</div><div class="v">Parmarth Education Counselling,<br>Vikas Puri, New Delhi — 110018</div></div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div><div class="l">Timings</div><div class="v">Mon – Sat, 10:00 AM – 7:00 PM</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>© 2026 Parmarth Education Counselling. Guidance for NIOS, distance education, and board examinations.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
